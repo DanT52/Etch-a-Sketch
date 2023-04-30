@@ -8,27 +8,45 @@
     
 
     <title>Artist Pad</title>
+    
   </head>
   <body>
     <div class="flex-container">
+        <div class="top"> 
         <div class="title"><h1>Artist Pad</h1></div>
+        <p>by Daniel Basarab</p>
+    </div>
+        
         <div class="content">
+            <div class="board-container">
             <div class="board"></div>
+        </div>
             <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">White</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onClick="resetBoard()">Reset</button>
+                <button onclick="changeColor('black')" style="background-color: black; border: 1px solid white;">Black</button>
+                <button onclick="changeColor('white')"style="background-color: white; color: black;">White</button>
+                <button onclick="changeColor('cyan')" style="color: black; background-color: cyan;">Cyan</button>
+                <button onclick="changeColor('yellow')" style="color: black; background-color: yellow;">yellow</button>
+                <button onclick="changeColor('magenta')" style="color: black; background-color: magenta;">magenta</button>
+
+                <button class="rainbow" onclick="changeColor('random')">Rainbow</button>
+                
+                
             </div>
+            <button class="clear" onClick="resetBoard()">Reset Board</button>
+            <div class="between">
             <div class="mode">click to turn pen on :)</div>
-            <div>
+            <div class="color"> Color: </div>
+            <div class="currentColor"></div>
+            </div>
+            <div class="size">
                 <input 
                 type="text" 
-                placeholder="Size (of board)" 
-                value="69" 
+                
+                value="50" 
                 onchange="changeSize(this.value)" 
                 />
                 <button>Set Board Size</button>
+                <div class="err"></div>
             </div>
         </div>
     </div>

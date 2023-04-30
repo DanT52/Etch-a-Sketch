@@ -1,4 +1,4 @@
-let color = 'black';
+let color = 'white';
 let click = false;
 
 function populateBoard(size) {
@@ -20,10 +20,13 @@ function populateBoard(size) {
 
 function changeSize(input) {
 
-    if (input >= 2 || input <= 100){
+    if (input >= 2 && input <= 100){
         populateBoard(input);
+        document.querySelector(".err").textContent = "";
     }else{
         console.log("issue with squares");
+        document.querySelector(".err").textContent = "Size must be between 2-100";
+
     }
     
 }
@@ -43,6 +46,26 @@ function colorSquare(){
 
 function changeColor(picked){
     color = picked
+
+    if (picked === "random") {
+        document.querySelector(".currentColor").style.background = `linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 1) 0%,
+            rgba(255, 154, 0, 1) 10%,
+            rgba(208, 222, 33, 1) 20%,
+            rgba(79, 220, 74, 1) 30%,
+            rgba(63, 218, 216, 1) 40%,
+            rgba(47, 201, 226, 1) 50%,
+            rgba(28, 127, 238, 1) 60%,
+            rgba(95, 21, 242, 1) 70%,
+            rgba(186, 12, 248, 1) 80%,
+            rgba(251, 7, 217, 1) 90%,
+            rgba(255, 0, 0, 1) 100%
+          )`;
+    }else{
+        document.querySelector(".currentColor").style.background = picked;
+
+    }
 }
 
 function resetBoard(){
@@ -64,5 +87,5 @@ document.querySelector("body").addEventListener("click", (e)=> {
 })
 
 
-populateBoard(69);
+populateBoard(50);
 
