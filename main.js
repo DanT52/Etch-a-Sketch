@@ -80,7 +80,7 @@ function randomizeBoard(){
     squares.forEach((div) => div.style.backgroundColor=`hsl(${Math.random() * 360}, 100%, 80%)`);
 }
     
-}
+
 
 document.querySelector("body").addEventListener("click", (e)=> {
     if(e.target.tagName != 'BUTTON'){
