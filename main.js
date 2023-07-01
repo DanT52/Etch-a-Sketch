@@ -20,7 +20,7 @@ function populateBoard(size) {
 
 function changeSize(input) {
 
-    if (input >= 2 && input <= 100){
+    if (input >= 2 && input <= 10000){
         populateBoard(input);
         document.querySelector(".err").textContent = "";
     }else{
