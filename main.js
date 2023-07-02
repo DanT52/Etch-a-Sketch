@@ -20,12 +20,12 @@ function populateBoard(size) {
 
 function changeSize(input) {
 
-    if (input >= 2 && input <= 10000){
+    if (input >= 2 && input <= 300){
         populateBoard(input);
         document.querySelector(".err").textContent = "";
     }else{
         console.log("issue with squares");
-        document.querySelector(".err").textContent = "Size must be between 2-100";
+        document.querySelector(".err").textContent = "Size must be between 2-300";
 
     }
     

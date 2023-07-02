@@ -22,7 +22,9 @@ Artist Pad is an interactive digital drawing board. Developed using HTML, CSS, a
 
 3. **Reset Board:** This feature allows you to clear the entire board to start a new masterpiece. 
 
-4. **Adjustable Board Size:** The size of the board can be adjusted by setting the desired number of squares (from 2 to 100).
+4. **Randomize Board** This feature allows you to set the board to have a randomly colored background.
+
+5. **Adjustable Board Size:** The size of the board can be adjusted by setting the desired number of squares (from 2 to 100).
 
 ## Usage
 Check out the project on live on [GitHub pages](dant52.github.io/Etch-a-Sketch/) or
